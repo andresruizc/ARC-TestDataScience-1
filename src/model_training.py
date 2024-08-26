@@ -92,18 +92,19 @@ def create_folder_structure():
         #'data',
         #'notebooks',
         #'src',
-        'models',
-        'results'
+        'models_results',
+        'models_pkl'
     ]
     for folder in folders:
         os.makedirs(folder, exist_ok=True)
 
 def save_model_outputs(name, model, model2, X, X_train, X_test, y_train, y_test):
-    model_dir = os.path.join('models', name)
+    model_dir = os.path.join('models_results', name)
     os.makedirs(model_dir, exist_ok=True)
     
     # Save model
-    joblib.dump(model, os.path.join(model_dir, 'model.pkl'))
+    model_dir_pkl = os.path.join('models_pkl', name)
+    joblib.dump(model, os.path.join(model_dir_pkl, 'model.pkl'))
     
     # Predictions
     y_pred = model.predict(X_test)
@@ -160,20 +161,6 @@ def save_model_outputs(name, model, model2, X, X_train, X_test, y_train, y_test)
         plt.savefig(os.path.join(model_dir, 'fi.png'))
         plt.close()
     
-    # if name in ["logistic"]:
-    #     #analyze_feature_importance(best_model_clf_, X_train)
-    #     importances = model.named_steps[model2[0][0]].coef_
-    
-    #     feature_importance = pd.DataFrame({'feature': X.columns, 'importance': importances})
-    #     feature_importance = feature_importance.sort_values('importance', ascending=False)
-    #     feature_importance = feature_importance[feature_importance['importance'] > 0]
-
-    
-    #     plt.figure(figsize=(10, 6))
-    #     sns.barplot(x='importance', y='feature', data=feature_importance)
-    #     plt.title('Feature Importance for ' + name)
-    #     plt.savefig(os.path.join(model_dir, 'fi.png'))
-    #     plt.close()
     
     # Classification Report
     report = classification_report(y_test, y_pred, output_dict=True)
@@ -298,12 +285,6 @@ def load_display_best_model(best_model):
   
 
 def cv_scores(results):
-    cv_scores = [result['cv_score'] for result in results.values()]
-    test_scores = [result['test_score'] for result in results.values()]
 
-    best_model = max(results, key=lambda x: results[x]['test_score'])
     best_model_cv = max(results, key=lambda x: results[x]['cv_score'])
     print(f"Best Model cv: {best_model_cv}")
-    print(f"\nBest Model: {best_model}")
-
-    return best_model_cv, best_model

@@ -26,13 +26,6 @@ from warnings import simplefilter
 simplefilter(action='ignore', category=FutureWarning)
 
 
-
-# For docker
-#data = pd.read_csv('heart_failure_clinical_records_dataset.csv')
-# For local
-data = pd.read_csv('/Users/andresjr/Documents/capgemini/pruebas/ARC-datascience-task11/data/heart_failure_clinical_records_dataset.csv')
-
-
 def improved_eda(data):
     print("Dataset Information:")
     print(data.info())
@@ -67,7 +60,6 @@ def improved_eda(data):
     plt.tight_layout()
     plt.show()
 
-improved_eda(data)
 
 # Advanced EDA
 def plot_feature_distributions(data):
@@ -82,7 +74,6 @@ def plot_feature_distributions(data):
     plt.tight_layout()
     plt.show()
 
-plot_feature_distributions(data)
     
 # Outlier detection and handling function
 def detect_outliers(data, columns, method='iqr'):
@@ -103,6 +94,5 @@ def detect_outliers(data, columns, method='iqr'):
     
     return data
 
-detect_outliers(data, data.select_dtypes(include=[np.number]).columns, method='iqr')
 
 

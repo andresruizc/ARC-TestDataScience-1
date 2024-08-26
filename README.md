@@ -29,28 +29,17 @@ Dataset source: [Heart Failure Clinical Records Dataset](https://archive.ics.uci
 ```
 .
 ├── data/
-│   ├── raw/
-│   │   └── heart_failure_clinical_records_dataset.csv
-│   └── processed/
+│   ├── heart_failure_clinical_records_dataset.csv
 ├── notebooks/
-│   ├── 01_data_loading_and_preprocessing.ipynb
-│   ├── 02_exploratory_data_analysis.ipynb
-│   ├── 03_feature_engineering.ipynb
-│   ├── 04_model_training_and_evaluation.ipynb
-│   └── 05_results_and_conclusion.ipynb
+│   ├── main.ipynb
 ├── src/
-│   ├── __init__.py
-│   ├── data_preprocessing.py
+│   ├── load_data_eda.py
 │   ├── feature_engineering.py
-│   ├── model_training.py
-│   └── model_evaluation.py
-├── models/
-├── results/
-├── tests/
+│   ├── main.py
+│   └── model_training.py
 ├── Dockerfile
 ├── requirements.txt
 ├── README.md
-└── .gitignore
 ```
 
 ## Setup

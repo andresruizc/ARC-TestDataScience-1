@@ -74,10 +74,16 @@ Dataset source: [Heart Failure Clinical Records Dataset](https://archive.ics.uci
 
 3. Run the Docker container:
    ```
-   docker run -p 8888:8888 -v $(pwd):/app heart-failure-prediction
+   docker run -p 8888:8888 jupyter-heart-failure   
    ```
 
 4. Open the Jupyter Lab URL provided in the console output in your web browser.
+
+
+Now there are two ways to run the project:
+
+1. going to notebook and then run all
+2. going to the console and run oython3 main.py
 
 ## Usage
 

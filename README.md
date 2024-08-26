@@ -44,7 +44,7 @@ This project focuses on predicting heart failure events using machine learning m
 
 2. Build the Docker image:
    ```
-   docker build -t heart-failure-prediction .
+   docker build -t heart-failure-prediction -f Dockerfile .
    ```
 
 3. Run the Docker container:

@@ -63,8 +63,8 @@ Dataset source: [Heart Failure Clinical Records Dataset](https://archive.ics.uci
 
 1. Clone this repository:
    ```
-   git clone https://github.com/yourusername/heart-failure-prediction.git
-   cd heart-failure-prediction
+   git clone https://github.com/andresruizc/abc-datascience.git
+   cd abc-datascience
    ```
 
 2. Build the Docker image:
@@ -80,10 +80,12 @@ Dataset source: [Heart Failure Clinical Records Dataset](https://archive.ics.uci
 4. Open the Jupyter Lab URL provided in the console output in your web browser.
 
 
-Now there are two ways to run the project:
+## Run
+
+There are two ways to run the project. I recommend the first option since you'll be able to check model output plots/images
 
 1. going to notebook and then run all
-2. going to the console and run oython3 main.py
+2. going to the console and run oython3 main.pys
 
 ## Usage
 

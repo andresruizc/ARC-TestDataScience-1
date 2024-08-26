@@ -38,8 +38,8 @@ This project focuses on predicting heart failure events using machine learning m
 
 1. Clone this repository:
    ```
-   git clone https://github.com/andresruizc/abc-datascience.git
-   cd abc-datascience
+   git clone https://github.com/andresruizc/ARC-TestDataScience-1.git
+   cd ARC-TestDataScience-1
    ```
 
 2. Build the Docker image:

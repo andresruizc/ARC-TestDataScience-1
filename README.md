@@ -112,6 +112,8 @@ The project evaluates several machine learning models:
 
 Each model is trained with hyperparameter tuning using GridSearchCV.
 
+`All trained models are also stored in .pkl format in the folder called models_pkl`
+
 ## Evaluation
 
 Models are evaluated using various metrics:

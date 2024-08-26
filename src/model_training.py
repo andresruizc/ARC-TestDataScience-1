@@ -241,7 +241,7 @@ def training(dict_models, X, X_train, X_test, y_train,y_test):
 
     # Save overall results
     results_df = pd.DataFrame(results).T
-    results_df.to_csv('results/model_comparison.csv')
+    results_df.to_csv('models_results/model_comparison.csv')
 
     # Best model analysis
     best_model_name = max(results, key=lambda x: results[x]['cv_score'])
@@ -255,7 +255,7 @@ def training(dict_models, X, X_train, X_test, y_train,y_test):
 # Load and display best model's outputs
 
 def load_display_best_model(best_model):
-    best_model_dir = os.path.join('models', best_model)
+    best_model_dir = os.path.join('models_results', best_model)
     plt.figure(figsize=(12, 4))
     plt.subplot(131)
     img = plt.imread(os.path.join(best_model_dir, 'roc_curve.png'))

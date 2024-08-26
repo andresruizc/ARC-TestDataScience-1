@@ -17,7 +17,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the Jupyter notebook and data file
 COPY notebooks/main.ipynb .
 COPY data/heart_failure_clinical_records_dataset.csv .
-COPY src/main.py .
+COPY src/* .
 
 # Expose port for Jupyter
 EXPOSE 8888

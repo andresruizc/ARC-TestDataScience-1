@@ -104,6 +104,7 @@ def save_model_outputs(name, model, model2, X, X_train, X_test, y_train, y_test)
     
     # Save model
     model_dir_pkl = os.path.join('models_pkl', name)
+    os.makedirs(model_dir_pkl, exist_ok=True)
     joblib.dump(model, os.path.join(model_dir_pkl, 'model.pkl'))
     
     # Predictions

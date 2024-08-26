@@ -15,7 +15,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the Jupyter notebook and data file
-COPY notebooks/task1.ipynb .
+COPY notebooks/main.ipynb .
 COPY data/heart_failure_clinical_records_dataset.csv .
 COPY src/main.py .
 

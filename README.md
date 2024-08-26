@@ -53,6 +53,9 @@ This project focuses on predicting heart failure events using machine learning m
    ```
 
 4. Open the Jupyter Lab URL provided in the console output in your web browser.
+   ```
+   http://127.0.0.1:8888/?token=xxxxxxxxxxxxx
+   ```
 
 ## Usage
 

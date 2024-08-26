@@ -37,8 +37,6 @@ def search_spaces_dict_models():
     search_space_lr = [{'logisticregression__C': [0.1, 1],
                         'logisticregression__penalty': ['l1', 'l2']}]
 
-    search_space_ridge = [{'ridge__alpha': [0.1, 1]}]
-
     search_space_decisiontree = [{'decisiontreeclassifier__max_depth': [2, 4, 6]}]
     search_space_randomforest = [{'randomforestclassifier__n_estimators': [10,50,100,200],
                                     'randomforestclassifier__max_features': [1,5,10]}]

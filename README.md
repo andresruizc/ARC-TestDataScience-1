@@ -49,7 +49,7 @@ This project focuses on predicting heart failure events using machine learning m
 
 3. Run the Docker container:
    ```
-   docker run -p 8888:8888 jupyter-heart-failure
+   docker run -p 8888:8888 heart-failure-prediction
    ```
 
 4. Open the Jupyter Lab URL provided in the console output in your web browser.

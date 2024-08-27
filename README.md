@@ -100,6 +100,8 @@ The dataset used in this project is the "Heart Failure Clinical Records" dataset
 The target variable is:
 - death event: if the patient died during the follow-up period (boolean)
 
+Here's the reference of the dataset to download the link: https://archive.ics.uci.edu/dataset/519/heart+failure+clinical+records
+
 ## Models
 
 The project evaluates several machine learning models:
